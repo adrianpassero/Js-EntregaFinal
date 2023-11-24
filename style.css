@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+body {
+    background-color: #969595;
+    color: #fff;
+}
+
+
+
+.titulo {
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    text-align: left;
+    /* Alinea el texto del formulario a la izquierda */
+    width: 300px;
+    /* Establece un ancho para el formulario */
+    margin: 0 auto;
+    /* Centra el formulario horizontalmente */
+}
+
+.form imput,
+.form button {
+    margin-bottom: 10px;
+}
+
+
+.carrito {
+    width: 40px;
+}
+
+
+.card {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btnComprar {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btnComprar:hover {
+    background-color: #2e3ef4;
+}

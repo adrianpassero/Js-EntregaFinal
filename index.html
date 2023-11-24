@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1 id="titulo" class="titulo"> Royal Caning</h1>
+
+        </div>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <a href="#"><img class="carrito" src="./img/carrito.png" alt=""></a>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-body">
+                        <h3 class="titulo-cart">MIS COMPRAS</h3>
+                        <ul class="navbar-nav ml-auto flex-grow-1 pe-3" id="contenedorCarrito"></ul>
+                        <button id="btnComprar" onclick="realizarCompra()">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+
+            <form id="formulario" class="form">
+                <input id="nombre" type="text" placeholder="Nombre">
+                <input id="apellido" type="text" placeholder="Apellido">
+                <input type="email" name="email" id="email" placeholder="Correo electrónico">
+                <button type="submit">Enviar</button>
+            </form>
+
+    </header>
+
+    <main>
+
+        <div id="contenedorCards" class="d-flex justify-content-center align-items-center flex-wrap"></div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

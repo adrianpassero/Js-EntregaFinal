@@ -1,0 +1,80 @@
+[
+    {
+    "id": 1,
+    "nombre": "ROYAL CANIN CAT HIPOALARGENICO X 1.5 KG",
+    "precio": 11.285,
+    "img": "./img/hypoallergenic-feline.webp"
+    },
+    {
+    "id": 2,
+    "nombre": "ROYAL CANIN CAT CALM X 2 KG",
+    "precio": 10.475,
+    "img": "./img/calm-feline.webp"
+    },
+    {
+    "id": 3,
+    "nombre": "ROYAL CANIN CAT DIABETIC X 1.5 KG",
+    "precio": 8.785,
+    "img": "./img/diabetic-feline.webp"
+    },
+    {
+    "id": 4,
+    "nombre": "ROYAL CANIN CAT GASTROINTESTINAL X 2 KG",
+    "precio": 9.685,
+    "img": "./img/gastrointestinal-feline.webp"
+    },
+    {
+    "id": 5,
+    "nombre": "ROYAL CANIN GASTROINTESTINAL MOD CALORIE X 2 KG",
+    "precio": 9.725,
+    "img": "./img/gastrointestinal-mod-calorie-feline.webp"
+    },
+    {
+    "id": 6,
+    "tnombre": "ROYAL CANIN CAT HEPATIC X 1.5 KG",
+    "precio": 7.290,
+    "img": "./img/hepatic-feline.webp"
+    },
+    {
+    "id": 7,
+    "nombre": "ROYAL CANIN CAT RENAL X 2 KG",
+    "precio": 8.605,
+    "img": "./img/renal-feline.webp"
+    },
+    {
+    "id": 8,
+    "nombre": "ROYAL CANIN CAT EARLY RENAL",
+    "precio": 6.860,
+    "img": "./img/early-renal-feline.webp"
+    },
+    {
+    "id": 9,
+    "nombre": "ROYAL CANIN CAT URINARY S/O",
+    "precio": 2.440,
+    "img": "./img/urinary-feline.webp"
+    },
+    {
+    "id": 10,
+    "nombre": "ROYAL CANIN CAT MATURE CONSULT",
+    "precio": 7.105,
+    "img": "./img/mature-consult-feline.webp"
+    },
+    {
+    "id": 11,
+    "nombre": "ROYAL CANIN CAT WEIGHT CONTROL CASTRADOS",
+    "precio": 12.455,
+    "img": "./img/gatos-castrados-weight-control-feline.webp"
+    },
+    {
+    "id": 12,
+    "nombre": "ROYAL CANIN CAT GASTROINTESTINAL FIBRE RESPONSE X 2 KG",
+    "precio": 9.855,
+    "img": "./img/gastro-fibre-response-feline.webp"
+    },
+    {
+    "id": 13,
+    "nombre": "ROYAL CANIN CAT SATIETY SUPPORT X 1.5 KG",
+    "precio": 6.595,
+    "img": "./img/satiety-support-feline.webp"
+    }
+]
