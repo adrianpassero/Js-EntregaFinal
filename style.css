@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-  }
+}
 
 
 
@@ -20,20 +20,33 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra los elementos verticalmente */
     text-align: left;
-    /* Alinea el texto del formulario a la izquierda */
     width: 300px;
-    /* Establece un ancho para el formulario */
     margin: 0 auto;
-    /* Centra el formulario horizontalmente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.form imput,
-.form button {
+.form imput {
+    width: 100%;
+    padding: 10px;
     margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
+.form button:hover {
+    background-color: #45a049;
+}
 
 .carrito {
     width: 40px;
@@ -51,7 +64,7 @@ body {
     text-align: center;
 }
 
-.btnComprar {
+.btnAgregar {
     text-decoration: none;
     display: inline-block;
     background-color: #007bff;
@@ -63,6 +76,37 @@ body {
     transition: background-color 0.2s;
 }
 
-.btnComprar:hover {
+.btnAgregar:hover {
     background-color: #2e3ef4;
+} 
+
+.btnComprar {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+
+.btnComprar:hover {
+    background-color: #45a049;
+}
+
+
+.btnEliminar {
+    background-color: #ff0000;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px; 
+    cursor: pointer; 
+}
+
+
+.btnEliminar:hover {
+    background-color: #cc0000;
 }

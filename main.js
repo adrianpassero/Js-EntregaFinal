@@ -25,19 +25,20 @@ async function main() {
 
         alimentos.forEach((alimento) => {
             let contenedorAlimento = document.createElement("div");
+            const precioFormateado = parseFloat(alimento.precio).toFixed(3);
             contenedorAlimento.innerHTML = `<div id=${alimento.id} class="card" style="width: 14rem;">
                 <img src="${alimento.img}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${alimento.nombre}</h5>
-                    <p class="card-text"> $ ${alimento.precio} </p>
-                    <a href="#" class="btnComprar">Comprar</a>
+                    <p class="card-text"> $ ${precioFormateado}</p>
+                    <a href="#" class="btnAgregar">Agregar</a>
                 </div>
             </div>`;
 
             contenedorCards.appendChild(contenedorAlimento);
 
-            const btnComprar = contenedorAlimento.querySelector(".btnComprar");
-            btnComprar.addEventListener("click", () => agregarCarrito(alimento.id));
+            const btnAgregar = contenedorAlimento.querySelector(".btnAgregar");
+            btnAgregar.addEventListener("click", () => agregarCarrito(alimento.id));
         });
 
     } catch (error) {
@@ -74,13 +75,15 @@ function mostrarCarrito() {
         const cantidad = item.cantidad;
 
         let contenedorProducto = document.createElement("li");
+        const precioFormateado = parseFloat(alimento.precio * cantidad).toFixed(3);
         contenedorProducto.innerHTML = `
             <p>${alimento.nombre} (x${cantidad})</p>
-            <p> $ ${alimento.precio * cantidad}</p>
+            <p> $ ${precioFormateado}</p>
+            <button class="btnEliminar" onclick="eliminarProducto(${alimento.id})">Eliminar</button>
         `;
         contenedorCarrito.appendChild(contenedorProducto);
 
-        totalCompra += alimento.precio * cantidad;
+        totalCompra += parseFloat(precioFormateado);
     });
 
     contenedorCarrito.innerHTML += `
@@ -89,7 +92,54 @@ function mostrarCarrito() {
         </li>
     `;
     contenedorCarrito.innerHTML += "</ul>";
+    if (carrito.length > 0) {
+        document.getElementById("carritoLleno").style.display = "inline";
+        document.getElementById("carritoVacio").style.display = "none";
+    } else {
+        document.getElementById("carritoLleno").style.display = "none";
+        document.getElementById("carritoVacio").style.display = "inline";
+    }
 }
+
+
+function eliminarProducto(id) {
+    const index = carrito.findIndex((item) => item.alimento.id === id);
+
+    if (index !== -1) {
+        
+        carrito.splice(index, 1);
+        
+        mostrarCarrito();
+    }
+}
+
+
+function realizarCompra() {
+    if (carrito.length === 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Carrito vacío',
+            text: 'Agrega productos al carrito antes de realizar la compra.',
+        });
+        return;
+    }
+
+    let mensajeCompra = 'Productos comprados:\n';
+
+    carrito.forEach((item) => {
+        mensajeCompra += `${item.alimento.nombre} (x${item.cantidad}) - $${item.alimento.precio * item.cantidad}\n`;
+    });
+
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra realizada con éxito',
+        text: `Gracias por tu compra.\n\n${mensajeCompra}`,
+    });
+
+    carrito.length = 0;
+    mostrarCarrito();
+}
+
 
 
 const form = document.getElementById("formulario");
@@ -113,7 +163,6 @@ function crearUsuario(e) {
 
     form.reset();
 }
-
 
 main();
 
